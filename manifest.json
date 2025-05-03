@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "Rockin' Right-Click",
+	"version": "1.0",
+	"description": "Right-click to select the text content of a paragraph or any other element on a webpage.",
+	"author": "Clark Fannin",
+	"permissions": ["contextMenus"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"action": {
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"48": "icons/icon48.png",
+			"128": "icons/icon128.png"
+		},
+		"default_title": "Rockin' Right-Click"
+	},
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	}
+}
